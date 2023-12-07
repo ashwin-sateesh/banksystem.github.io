@@ -1,11 +1,40 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title>Bank System - Customer Account Management</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
-</head>
+    <head>
+        <title>Bank System Login</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script type="text/javascript">
+            function validateLogin() {
+                var username = document.getElementById('username').value;
+                var password = document.getElementById('password').value;
+    
+                if (username == 'employee' && password == 'password') {
+                    window.location.href = 'main.html'; // Redirects to the main page
+                } else {
+                    alert('Invalid username or password');
+                }
+    
+                return false; // Prevents default form submission
+            }
+        </script>
+    </head>
 
 <body>
+
+    <h1>Bank System Login</h1>
+
+    <form onsubmit="return validateLogin()">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required><br><br>
+    
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required><br><br>
+    
+        <input type="submit" value="Login">
+    </form>
+
+
+
 
 <!-- Customer Account Management -->
 <h1>Customer Account Management</h1>
