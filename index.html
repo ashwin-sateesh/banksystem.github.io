@@ -1,133 +1,35 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Bank System Login</title>
-        <link rel="stylesheet" type="text/css" href="style.css">
-        <script type="text/javascript">
-            function validateLogin() {
-                var username = document.getElementById('username').value;
-                var password = document.getElementById('password').value;
-    
-                if (username == 'employee' && password == 'password') {
-                    window.location.href = 'main.html'; // Redirects to the main page
-                } else {
-                    alert('Invalid username or password');
-                }
-    
-                return false; // Prevents default form submission
-            }
-        </script>
-    </head>
+<head>
+    <title>Bank System Login</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script type="text/javascript">
+        function validateLogin() {
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
 
+            if (username == 'employee' && password == 'password') {
+                window.location.href = 'main.html'; // Redirects to the main page
+            } else {
+                alert('Invalid username or password');
+                return false; // Prevents form submission
+            }
+        }
+    </script>
+</head>
 <body>
 
-    <h1>Bank System Login</h1>
+<h1>Bank System Login</h1>
 
-    <form onsubmit="return validateLogin()">
-        <label for="username">Username:</label>
-        <input type="text" id="username" name="username" required><br><br>
-    
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required><br><br>
-    
-        <input type="submit" value="Login">
-    </form>
+<form onsubmit="return validateLogin()">
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username" required><br><br>
 
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required><br><br>
 
-
-
-<!-- Customer Account Management -->
-<h1>Customer Account Management</h1>
-
-<!-- Create Account Form -->
-<h2>Create Account</h2>
-<form id="createAccountForm">
-    <label for="customerName">Customer Name:</label>
-    <input type="text" id="customerName" name="customerName" required>
-    <input type="submit" value="Create Account">
+    <input type="submit" value="Login">
 </form>
-
-<!-- Update Account Form -->
-<h2>Update Account</h2>
-<form id="updateAccountForm">
-    <label for="accountId">Account ID:</label>
-    <input type="number" id="accountId" name="accountId" required>
-    <label for="newCustomerName">New Customer Name:</label>
-    <input type="text" id="newCustomerName" name="newCustomerName" required>
-    <input type="submit" value="Update Account">
-</form>
-
-<!-- View and Delete Accounts -->
-<h2>View and Delete Accounts</h2>
-<table id="accountsTable">
-    <tr>
-        <th>Account ID</th>
-        <th>Customer Name</th>
-        <th>Delete</th>
-    </tr>
-    <!-- Table rows would be populated here -->
-</table>
-
-<!-- Transaction Processing -->
-<h1>Transaction Processing</h1>
-
-<!-- Deposit Form -->
-<h2>Deposit Form</h2>
-<form id="depositForm">
-    <label for="depositAccountId">Account ID:</label>
-    <input type="number" id="depositAccountId" name="depositAccountId" required>
-    <label for="depositAmount">Amount:</label>
-    <input type="number" id="depositAmount" name="depositAmount" required>
-    <input type="submit" value="Deposit">
-</form>
-
-<!-- Withdrawal Form -->
-<h2>Withdrawal Form</h2>
-<form id="withdrawalForm">
-    <label for="withdrawalAccountId">Account ID:</label>
-    <input type="number" id="withdrawalAccountId" name="withdrawalAccountId" required>
-    <label for="withdrawalAmount">Amount:</label>
-    <input type="number" id="withdrawalAmount" name="withdrawalAmount" required>
-    <input type="submit" value="Withdraw">
-</form>
-
-<!-- Transfer Form -->
-<h2>Transfer Form</h2>
-<form id="transferForm">
-    <label for="fromAccountId">From Account ID:</label>
-    <input type="number" id="fromAccountId" name="fromAccountId" required>
-    <label for="toAccountId">To Account ID:</label>
-    <input type="number" id="toAccountId" name="toAccountId" required>
-    <label for="transferAmount">Amount:</label>
-    <input type="number" id="transferAmount" name="transferAmount" required>
-    <input type="submit" value="Transfer">
-</form>
-
-<!-- Account Balance Inquiry -->
-<h1>Account Balance Inquiry</h1>
-<h2>Balance Inquiry Form</h2>
-<form id="balanceInquiryForm">
-    <label for="inquiryAccountId">Account ID:</label>
-    <input type="number" id="inquiryAccountId" name="inquiryAccountId" required>
-    <input type="submit" value="Check Balance">
-</form>
-
-<!-- Loan Management -->
-<h1>Loan Management</h1>
-<!-- Loan Application Form -->
-<h2>Loan Application Form</h2>
-<form id="loanApplicationForm">
-    <label for="applicantName">Applicant's Name:</label>
-    <input type="text" id="applicantName" name="applicantName" required>
-    <label for="loanAmount">Loan Amount:</label>
-    <input type="number" id="loanAmount" name="loanAmount" required>
-    <input type="submit" value="Apply for Loan">
-</form>
-
-<!-- Reporting -->
-<h1>Reporting</h1>
-<button id="generateTransactionReport">Generate Transaction Report</button>
-<button id="generateAccountSummary">Generate Account Summary</button>
 
 </body>
 </html>
