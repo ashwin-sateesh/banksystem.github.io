@@ -4,13 +4,13 @@
     <title>Bank System - Customer Account Management</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <script type="text/javascript">
-        function toggleTask(taskId) {
-            var task = document.getElementById(taskId);
-            if (task.style.display === "none" || task.style.display === "") {
-                task.style.display = "block";
-            } else {
-                task.style.display = "none";
-            }
+        function showTask(taskId) {
+            var tasks = ["customerAccountManagement", "transactionProcessing", "accountBalanceInquiry", "loanManagement", "reporting"];
+            tasks.forEach(function(id) {
+                document.getElementById(id).style.display = 'none';
+            });
+
+            document.getElementById(taskId).style.display = 'block';
         }
     </script>
 </head>
@@ -20,12 +20,13 @@
 <h1>Bank Management System</h1>
 <p>Welcome to the Bank Management System. Here you can manage customer accounts, transactions, and more.</p>
 
-<!-- Buttons to Show/Hide Tasks -->
-<button onclick="toggleTask('customerAccountManagement')">Customer Account Management</button>
-<button onclick="toggleTask('transactionProcessing')">Transaction Processing</button>
-<button onclick="toggleTask('accountBalanceInquiry')">Account Balance Inquiry</button>
-<button onclick="toggleTask('loanManagement')">Loan Management</button>
-<button onclick="toggleTask('reporting')">Reporting</button>
+<!-- Buttons to Show Task Sections -->
+<button onclick="showTask('customerAccountManagement')">Customer Account Management</button>
+<button onclick="showTask('transactionProcessing')">Transaction Processing</button>
+<button onclick="showTask('accountBalanceInquiry')">Account Balance Inquiry</button>
+<button onclick="showTask('loanManagement')">Loan Management</button>
+<button onclick="showTask('reporting')">Reporting</button>
+
 
 <!-- Customer Account Management Section -->
 <div id="customerAccountManagement" style="display:none;">
