@@ -3,33 +3,14 @@
 <head>
     <title>Bank System Login</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
-    <script type="text/javascript">
-        function validateLogin(event) {
-        event.preventDefault(); // Prevents the default form submission
-
-        console.log("validateLogin called"); // Debugging log
-
-        var username = document.getElementById('username').value;
-        var password = document.getElementById('password').value;
-
-        console.log("Username: " + username + ", Password: " + password); // Debugging log
-
-        if (username == 'employee' && password == 'password') {
-           console.log("Redirecting to main.html"); // Debugging log
-           window.location.href = 'main.html'; // Redirects to the main page
-        } else {
-           alert('Invalid username or password');
-       }
-       }
-
-    </script>
 </head>
 <body>
 
 <h1>Bank System Login</h1>
 
 <!-- Login Form -->
-<form onsubmit="validateLogin(event); return false;">
+<!-- Form now submits to login.php for server-side processing -->
+<form method="post" action="login.php">
     <label for="username">Username:</label>
     <input type="text" id="username" name="username" required><br><br>
 
@@ -38,7 +19,6 @@
 
     <input type="submit" value="Login">
 </form>
-
 
 </body>
 </html>
