@@ -5,7 +5,7 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <script type="text/javascript">
         function validateLogin(event) {
-            event.preventDefault();
+            event.preventDefault(); // Prevents the default form submission
 
             var username = document.getElementById('username').value;
             var password = document.getElementById('password').value;
@@ -14,7 +14,6 @@
                 window.location.href = 'main.html'; // Redirects to the main page
             } else {
                 alert('Invalid username or password');
-                return false; // Prevents form submission
             }
         }
     </script>
@@ -23,10 +22,8 @@
 
 <h1>Bank System Login</h1>
 
-<!-- <button onclick="window.location.href='main.html';">Go to Main Page</button>
--->
-
-<form onsubmit="return validateLogin()">
+<!-- Login Form -->
+<form onsubmit="validateLogin(event)">
     <label for="username">Username:</label>
     <input type="text" id="username" name="username" required><br><br>
 
