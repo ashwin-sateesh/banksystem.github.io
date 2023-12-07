@@ -4,7 +4,9 @@
     <title>Bank System Login</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <script type="text/javascript">
-        function validateLogin() {
+        function validateLogin(event) {
+            event.preventDefault();
+
             var username = document.getElementById('username').value;
             var password = document.getElementById('password').value;
 
@@ -20,7 +22,9 @@
 <body>
 
 <h1>Bank System Login</h1>
+<button onclick="window.location.href='main.html';">Go to Main Page</button>
 
+<!-- 
 <form onsubmit="return validateLogin()">
     <label for="username">Username:</label>
     <input type="text" id="username" name="username" required><br><br>
@@ -30,6 +34,6 @@
 
     <input type="submit" value="Login">
 </form>
-
+-->
 </body>
 </html>
